@@ -11,7 +11,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-    origin: ['https://playful-daifuku-1be911.netlify.app/', 'http://localhost:8000'],
+    origin: ['https://playful-daifuku-1be911.netlify.app', 'http://localhost:8000'],
     credentials: true
 }));
 app.use(express.json());
