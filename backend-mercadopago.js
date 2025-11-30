@@ -107,22 +107,17 @@ app.post('/api/create-preference', async (req, res) => {
                 }
             ],
             payer: {
-                name: customerName,
-                email: customerEmail,
-                phone: {
-                    area_code: '52',
-                    number: parseInt(customerPhone)
-                }
-            },
-            back_urls: {
-                success: 'http://localhost:8000/payment-status.html?status=success',
-                failure: 'http://localhost:8000/payment-status.html?status=failure',
-                pending: 'http://localhost:8000/payment-status.html?status=pending'
-            },
-            auto_return: 'approved',
-            payment_methods: {
-                installments: 12
-            },
+    name: customerName,
+    email: customerEmail,
+    phone: {
+        area_code: '52',
+        number: parseInt(customerPhone)
+    }
+},
+// SIN back_urls
+payment_methods: {
+    installments: 12
+},
             external_reference: `${Date.now()}-${packageName}`,
             metadata: {
                 package: packageName,
